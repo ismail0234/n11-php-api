@@ -81,7 +81,12 @@ Class Request
 			unset($data['auth']);
 		}
 
-		return $this->client->$method(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data));
+		try {
+			return $this->client->$method(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data));
+		} catch (\Exception $e) {
+			throw new N11Exception($e->getMessage());
+			
+		}	
 
 	}
 
