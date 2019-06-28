@@ -59,7 +59,7 @@ Class Request
 	{
 
 		try {
-			$this->client = new \SoapClient($this->serviceUrl, array("trace" => 1, "exception" => 1));
+			$this->client = new \SoapClient($this->serviceUrl, array("trace" => 1, "exception" => false, 'cache_wsdl' => WSDL_CACHE_NONE));
 			return true; 
 		} catch (\Exception $e) {
 			throw new N11Exception("SOAP Oturumu Başarısız");
