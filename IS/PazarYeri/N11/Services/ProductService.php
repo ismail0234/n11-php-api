@@ -59,7 +59,7 @@ Class ProductService
 		return $client->sendRequest('deleteProductById', array('productId' => $productId));
 
 	}
-	
+
 	/**
 	 *
 	 * @description Kayıtlı olan bir ürünü mağaza ürün kodu kullanılarak silmek için kullanılır.
@@ -70,7 +70,20 @@ Class ProductService
 
 		return $client->sendRequest('deleteProductBySellerCode', array('productSellerCode' => $productSellerCode));
 
-	}
+	}	
+
+	/**
+	 *
+	 * @description Kayıtlı olan bir ürünü mağaza ürün kodu kullanılarak silmek için kullanılır.
+	 * @note Henüz tamamlanmadı
+	 *
+	 */
+	/*public function productApprovalStatus($client)
+	{	
+
+		return $client->sendRequest('productApprovalStatus');
+
+	}*/
 
 	/**
 	 *
