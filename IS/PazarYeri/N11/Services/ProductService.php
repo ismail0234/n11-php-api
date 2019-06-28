@@ -50,6 +50,30 @@ Class ProductService
 
 	/**
 	 *
+	 * @description Kayıtlı olan bir ürünü N11 Id si kullanarak silmek için kullanılır.
+	 *
+	 */
+	public function deleteProductById($client, $productId)
+	{	
+
+		return $client->sendRequest('deleteProductById', array('productId' => $productId));
+
+	}
+	
+	/**
+	 *
+	 * @description Kayıtlı olan bir ürünü mağaza ürün kodu kullanılarak silmek için kullanılır.
+	 *
+	 */
+	public function deleteProductBySellerCode($client, $productSellerCode)
+	{	
+
+		return $client->sendRequest('deleteProductBySellerCode', array('productSellerCode' => $productSellerCode));
+
+	}
+
+	/**
+	 *
 	 * @description Mağaza ürünlerini aramak için kullanılır.
 	 * @note Henüz tamamlanmadı
 	 *
