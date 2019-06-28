@@ -205,3 +205,40 @@ $client->product->deleteProductById(1234567890);
  */
 $client->product->deleteProductBySellerCode(1234567890);
 ```
+
+### Ürün Satış Durumu Servisi (ProductSellingService)
+
+```php
+
+/**
+ *
+ * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.  
+ * @param int N11 Ürün Id - Zorunlu
+ *
+ */
+$client->selling->stopSellingProductByProductId(1234567890);	
+
+/**
+ *
+ * @description Satışta olmayan bir ürünün mağaza ürün kodu kullanılarak satışa başlanması için kullanılır.
+ * @param string N11 Ürün Mağaza Id - Zorunlu
+ *
+ */
+$client->selling->startSellingProductBySellerCode('IS-20014');
+
+/**
+ *
+ * @description Satışta olan ürünün n11 ürün ID si kullanılarak satışa kapatılması için kullanılır.
+ * @param int N11 Ürün Id - Zorunlu
+ *
+ */
+$client->selling->startSellingProductByProductId(1234567890);
+
+/**
+ *
+ * @description Satışta olan ürünün mağaza ürün kodu kullanılarak satışının durdurulması için kullanılır.
+ * @param string N11 Ürün Mağaza Id - Zorunlu
+ *
+ */
+$client->selling->stopSellingProductBySellerCode('IS-20014');
+```
