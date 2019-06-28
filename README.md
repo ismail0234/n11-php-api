@@ -50,7 +50,7 @@ $client->city->getCities();
 /**
  *
  * @description Şehir hakkında birkaç bilgi döndürür.
- * @param int Şehir Id
+ * @param int Şehir Id - Zorunlu
  *
  */
 $client->city->getCity(34);
@@ -58,7 +58,7 @@ $client->city->getCity(34);
 /**
  *
  * @description Plaka kodu verilen şehre ait ilçelerinin listelenmesi için kullanılır.
- * @param int Şehir Id
+ * @param int Şehir Id - Zorunlu
  *
  */
 $client->city->getDistrict(34);
@@ -66,7 +66,7 @@ $client->city->getDistrict(34);
 /**
  *
  * @description İlçe kodu verilen semt/mahallelerin listelenmesi için kullanılır.
- * @param int İlçe Id
+ * @param int İlçe Id - Zorunlu
  *
  */
 $client->city->getNeighborhoods(22569);
@@ -98,7 +98,7 @@ $client->shipment->getShipmentTemplateList();
 /**
  *
  * @description Teslimat şablon ismi ile aratılan şablonun bilgilerini döndürür.
- * @param string Şablon Adı
+ * @param string Şablon Adı - Zorunlu
  *
  */
 $client->shipment->getShipmentTemplate('Ücretsiz Kargo');
@@ -119,7 +119,7 @@ $client->category->getTopLevelCategories();
  *
  * @description İstenilen kategori, üst seviye kategori veya diğer seviye kategorilerden olabilir, bu kategorilere ait olan özelliklerin
  *				ve bu özelliklere ait değerlerin listelenmesi için kullanılan metottur.
- * @param int Kategori Id
+ * @param int Kategori Id - Zorunlu
  * @param array Sayfalama - İsteğe Bağlı
  *
  */
@@ -129,7 +129,7 @@ $client->category->getCategoryAttributes(1002841, array('currentPage' => 1, 'pag
  *
  * @description İstenilen kategori, üst seviye kategori veya diğer seviye kategorilerden olabilir, 
  * 				bu kategorilere ait olan özelliklerin listelenmesi için kullanılan metoddur.
- * @param int Kategori Id
+ * @param int Kategori Id - Zorunlu
  *
  */
 $client->category->getCategoryAttributesId(1002841);
@@ -138,11 +138,11 @@ $client->category->getCategoryAttributesId(1002841);
  *
  * @description Özelliğe sistemimizde verilen id bilgisini (category.attributeList.attribute.id) girdi vererek,
  *				o özelliğe ait değerleri listeler.
- * @param int Kategori Id
+ * @param int Kategori Id - Zorunlu
  * @param array Sayfalama - İsteğe Bağlı
  *
  */
-$client->category->getCategoryAttributeValue(354080997, array('currentPage' => 0, 'pageSize' => 20);
+$client->category->getCategoryAttributeValue(354080997, array('currentPage' => 0, 'pageSize' => 20));
 
 /**
  *
@@ -187,5 +187,21 @@ $client->product->getProductBySellerCode('IS-20014');
  * @param array Sayfalama - İsteğe Bağlı 
  *
  */
-$client->product->getProductList(array('currentPage' => 0, 'pageSize' => 20);
+$client->product->getProductList(array('currentPage' => 0, 'pageSize' => 20));
+
+/**
+ *
+ * @description Kayıtlı olan bir ürünü N11 Id si kullanarak silmek için kullanılır.
+ * @param int N11 Ürün Id - Zorunlu
+ *
+ */
+$client->product->deleteProductById(1234567890);
+
+/**
+ *
+ * @description Kayıtlı olan bir ürünü mağaza ürün kodu kullanılarak silmek için kullanılır.
+ * @param string N11 Ürünün Mağazadaki Ürün Kodu - Zorunlu
+ *
+ */
+$client->product->deleteProductBySellerCode(1234567890);
 ```
