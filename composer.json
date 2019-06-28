@@ -1,8 +1,8 @@
 {
-    "name": "ismail0234/aras-kargo-php-api",
-    "description": "Aras Kargo PHP API",
+    "name": "ismail0234/n11-php-api",
+    "description": "N11 PHP API",
     "type": "library",
-    "keywords": ["kargo", "api", "aras kargo", "kargo api", "php aras kargo api"],
+    "keywords": ["n11", "eticaret", "php api", "n11 php api", "pazaryeri"],
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "IS\\Kargo\\Aras\\": "IS/Kargo/Aras"
+            "IS\\PazarYeri\\N11\\": "IS/PazarYeri/N11"
         }
     },
     "minimum-stability": "stable"
