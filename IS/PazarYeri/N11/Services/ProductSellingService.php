@@ -14,7 +14,7 @@ Class ProductSellingService
 
 	/**
 	 *
-	 * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.  
+	 * @description Satışta olan ürünün n11 ürün ID si kullanılarak satışa kapatılması için kullanılır.
 	 *
 	 */
 	public function stopSellingProductByProductId($client, $productId)
@@ -26,7 +26,7 @@ Class ProductSellingService
 
 	/**
 	 *
-	 * @description Satışta olmayan bir ürünün mağaza ürün kodu kullanılarak satışa başlanması için kullanılır.
+	 * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.  
 	 *
 	 */
 	public function startSellingProductBySellerCode($client, $productSellerCode)
@@ -38,7 +38,7 @@ Class ProductSellingService
 
 	/**
 	 *
-	 * @description Satışta olan ürünün n11 ürün ID si kullanılarak satışa kapatılması için kullanılır.
+	 * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.
 	 *
 	 */
 	public function startSellingProductByProductId($client, $productId)

@@ -212,7 +212,7 @@ $client->product->deleteProductBySellerCode(1234567890);
 
 /**
  *
- * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.  
+ * @description Satışta olan ürünün n11 ürün ID si kullanılarak satışa kapatılması için kullanılır.
  * @param int N11 Ürün Id - Zorunlu
  *
  */
@@ -220,7 +220,7 @@ $client->selling->stopSellingProductByProductId(1234567890);
 
 /**
  *
- * @description Satışta olmayan bir ürünün mağaza ürün kodu kullanılarak satışa başlanması için kullanılır.
+ * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.  
  * @param string N11 Ürün Mağaza Id - Zorunlu
  *
  */
@@ -228,7 +228,7 @@ $client->selling->startSellingProductBySellerCode('IS-20014');
 
 /**
  *
- * @description Satışta olan ürünün n11 ürün ID si kullanılarak satışa kapatılması için kullanılır.
+ * @description Satışta olmayan bir ürünün N11 ürün ID si kullanılarak satışa başlanması için kullanılır.
  * @param int N11 Ürün Id - Zorunlu
  *
  */
