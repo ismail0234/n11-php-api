@@ -1,6 +1,7 @@
 <?php
 
-namespace IS\PazarYeri\N11;
+namespace IS\PazarYeri\N11\Helper;
+
 
 Class BaseCall
 {
@@ -36,7 +37,7 @@ Class BaseCall
 	public function __construct($serviceName, $apiKey, $apiPassword)
 	{
 
-		$soapServiceName = "IS\PazarYeri\N11\\" . $serviceName;
+		$soapServiceName = "IS\PazarYeri\N11\Services\\" . $serviceName;
 		$this->service = new $soapServiceName();
 		$this->request = new Request($this->service->url , $apiKey, $apiPassword);
 

@@ -1,6 +1,8 @@
 <?php
 
-namespace IS\PazarYeri\N11;
+namespace IS\PazarYeri\N11\Helper;
+
+use IS\PazarYeri\N11\Exception;
 
 Class GateWay
 {

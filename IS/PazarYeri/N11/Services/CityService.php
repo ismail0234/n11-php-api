@@ -1,6 +1,6 @@
 <?php
 
-namespace IS\PazarYeri\N11;
+namespace IS\PazarYeri\N11\Services;
 
 Class CityService
 {
