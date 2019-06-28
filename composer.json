@@ -1,0 +1,20 @@
+{
+    "name": "ismail0234/aras-kargo-php-api",
+    "description": "Aras Kargo PHP API",
+    "type": "library",
+    "keywords": ["kargo", "api", "aras kargo", "kargo api", "php aras kargo api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "İsmail Satilmiş",
+            "email": "ismaiil_0234@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "IS\\Kargo\\Aras\\": "IS/Kargo/Aras"
+        }
+    },
+    "minimum-stability": "stable"
+}
