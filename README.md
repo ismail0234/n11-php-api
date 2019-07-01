@@ -265,17 +265,6 @@ $client->stock->getProductStockByProductId(1234567890);
 
 /**
  *
- * @description Sistemde kayıtlı olan ürünün N11 ürün ID si ile ürün stok bilgilerini getiren metottur. 
- * 				Cevap içinde stok durumunun “version” bilgisi de vardır, ürün stoklarında değişme olduysa 
- *				bu versiyon bilgisi artacaktır, çağrı yapan taraf versiyon bilgisini kontrol ederek N11 e 
- *				verilen stok bilgilerinde değişim olup olmadığını anlayabilir.
- * @param int N11 Ürün Id - Zorunlu
- *
- */
-$client->stock->getProductStockByProductId(1234567890);
-
-/**
- *
  * @description Bu metot sipariş ile ilgili özet bilgileri listelemek için kullanılır.
  * @note İsteğe bağlı olarak dizideki alanların istenilen bölümleri eklenmeyebilir veya dizi hiç gönderilmeyebilir.
  * @param array Arama Sorgusu - İsteğe Bağlı
