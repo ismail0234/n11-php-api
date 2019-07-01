@@ -35,6 +35,7 @@ Class GateWay
 		'selling'         => 'ProductSellingService',
 		'stock'           => 'ProductStockService',
 		'order'           => 'OrderService',
+		'webhook'         => 'WebHookService',
 	);
 
 	/**

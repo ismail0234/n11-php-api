@@ -54,7 +54,6 @@ Class BaseCall
 	public function __call($methodName, $arguments)
 	{
 
-
 		if(!$this->clientStatus) {
 			$this->clientStatus = $this->request->connectSoap();
 		}
