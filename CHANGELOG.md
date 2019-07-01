@@ -1,3 +1,7 @@
+#### Version 1.0.5
+* WebHookService için BETA Sürüm Eklendi.
+* Tarih yazım hatası düzeltildi.
+
 #### Version 1.0.4
 * OrderService ve ProductStockService Eklendi.
 * Api password ve username değişken tipi değiştirildi.
