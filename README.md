@@ -273,9 +273,6 @@ $client->stock->getProductStockByProductId(1234567890);
  *
  */
 $client->stock->getProductStockByProductId(1234567890);
-```
-
-```php
 
 /**
  *
