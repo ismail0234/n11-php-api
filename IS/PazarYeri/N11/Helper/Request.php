@@ -10,14 +10,14 @@ Class Request
 	 * @description N11 Api Key
 	 *
 	 */
-	public $apiKey;
+	protected $apiKey;
 
 	/**
 	 *
 	 * @description N11 Api Şifre
 	 *
 	 */
-	public $apiPassword;
+	protected $apiPassword;
 
 	/**
 	 *
