@@ -22,7 +22,7 @@ N11 için yazılmış olan gelişmiş bir php apisi.
  * [Ürün Satış Durumu Servisi (ProductSellingService)](#ürün-satış-durumu-servisi-productsellingservice)
  * [Ürün Stok Servisi (ProductStockService)](#ürün-stok-servisi-productstockservice)
  * [Sipariş Servisi (Order Service)](#sipariş-servisi-order-service)
- * N11 Sipariş WebHook (N11 Order WebHook) - Yakında
+ * N11 Sipariş Bildirimi WebHook (N11 Order WebHook) - Yakında
 
 ## Kurulum
 
