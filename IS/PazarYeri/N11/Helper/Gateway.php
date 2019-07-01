@@ -33,6 +33,8 @@ Class GateWay
 		'category'        => 'CategoryService',
 		'product'         => 'ProductService',
 		'selling'         => 'ProductSellingService',
+		'stock'           => 'ProductStockService',
+		'order'           => 'OrderService',
 	);
 
 	/**
