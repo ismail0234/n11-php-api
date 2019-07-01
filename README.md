@@ -296,10 +296,10 @@ $client->order->orderList(
 		'recipient'         => 'ismail',
 		// Sipariş oluşturma tarihi başlangıç
 		'period'            => array(
-			// Başlangıç Tarihi
-			'startDate' => '07.01.2019',
-			// Bitiş Tarihi
-			'endDate'   => '08.01.2019'
+			// Başlangıç Tarihi => d/m/Y H:i:s
+			'startDate' => '28/06/2019',
+			// Bitiş Tarihi => d/m/Y H:i:s
+			'endDate'   => '01/07/2019'
 		),
 		// Güncellenen Siparişleri Listeler
 		'sortForUpdateDate' => false,
