@@ -242,3 +242,88 @@ $client->selling->startSellingProductByProductId(1234567890);
  */
 $client->selling->stopSellingProductBySellerCode('IS-20014');
 ```
+
+### Ürün Stok Servisi (ProductStockService)
+
+```php
+
+/**
+ *
+ * @description Sistemde kayıtlı olan ürünün N11 ürün ID si ile ürün stok bilgilerini getiren metottur. 
+ * 				Cevap içinde stok durumunun “version” bilgisi de vardır, ürün stoklarında değişme olduysa 
+ *				bu versiyon bilgisi artacaktır, çağrı yapan taraf versiyon bilgisini kontrol ederek N11 e 
+ *				verilen stok bilgilerinde değişim olup olmadığını anlayabilir.
+ * @param int N11 Ürün Id - Zorunlu
+ *
+ */
+$client->stock->getProductStockByProductId(1234567890);
+```
+
+### Sipariş Servisi (Order Service)
+
+```php
+
+/**
+ *
+ * @description Sistemde kayıtlı olan ürünün N11 ürün ID si ile ürün stok bilgilerini getiren metottur. 
+ * 				Cevap içinde stok durumunun “version” bilgisi de vardır, ürün stoklarında değişme olduysa 
+ *				bu versiyon bilgisi artacaktır, çağrı yapan taraf versiyon bilgisini kontrol ederek N11 e 
+ *				verilen stok bilgilerinde değişim olup olmadığını anlayabilir.
+ * @param int N11 Ürün Id - Zorunlu
+ *
+ */
+$client->stock->getProductStockByProductId(1234567890);
+```
+
+```php
+
+/**
+ *
+ * @description Bu metot sipariş ile ilgili özet bilgileri listelemek için kullanılır.
+ * @note İsteğe bağlı olarak dizideki alanların istenilen bölümleri eklenmeyebilir veya dizi hiç gönderilmeyebilir.
+ * @param array Arama Sorgusu - İsteğe Bağlı
+ *
+ */
+$client->order->orderList(
+	array(
+		// Ürün ID Numarası
+		'productId'         => 1234567890,
+		// Sipariş Durumu   => New, Approved, Rejected, Shipped, Delivered, Completed, Claimed, LATE_SHIPMENT
+		'status'            => 'New',
+		// Alıcı Adı 
+		'buyerName'         => 'ismail',
+		// Sipariş Numarası
+		'orderNumber'       => 1234567890,
+		// Ürün Mağaza Kodu
+		'productSellerCode' => 'IS-20014',
+		// Teslim alacak kişinin adı
+		'recipient'         => 'ismail',
+		// Sipariş oluşturma tarihi başlangıç
+		'period'            => array(
+			// Başlangıç Tarihi
+			'startDate' => '07.01.2019',
+			// Bitiş Tarihi
+			'endDate'   => '08.01.2019'
+		),
+		// Güncellenen Siparişleri Listeler
+		'sortForUpdateDate' => false,
+		// Sayfalama
+		'pagingData' => array(
+			// Şuanki Sayfa
+			'currentPage' => 0,
+			// Gösterilecek nesne
+			'pageSize'    => 20
+		)
+
+	)
+);
+
+/**
+ *
+ * @description Sipariş N11 ID bilgisi kullanarak sipariş detaylarını almak için kullanılır, 
+ *				sipariş N11 ID bilgisine orderList metotlarıyla ulaşılabilir.
+ * @param int Sipariş ID Numarası - Zorunlu
+ *
+ */
+$client->order->orderDetail(123456789);
+```
