@@ -22,7 +22,7 @@ N11 için yazılmış olan gelişmiş bir php apisi.
  * [Ürün Satış Durumu Servisi (ProductSellingService)](#ürün-satış-durumu-servisi-productsellingservice)
  * [Ürün Stok Servisi (ProductStockService)](#ürün-stok-servisi-productstockservice)
  * [Sipariş Servisi (Order Service)](#sipariş-servisi-order-service)
- * N11 Sipariş Bildirimi WebHook (N11 Order WebHook) - Yakında
+ * [N11 Sipariş Bildirimi WebHook (N11 Order WebHook)]
 
 ## Kurulum
 
@@ -323,4 +323,49 @@ $client->order->orderList(
  *
  */
 $client->order->orderDetail(123456789);
+```
+
+### N11 Sipariş Bildirimi WebHook (N11 Order WebHook)
+
+N11 Tarafından sipariş bildirimleri için bir webhook verilmediği için bu işlemi yapmak isteyenler kişiler için yazılmış olan bir webhook dur. Webhook'u kullanabilmeniz için sunucunuzda **sqlite** pdo driver kurulu olması gerekmektedir.
+
+```php
+
+include "vendor/autoload.php";
+
+use IS\PazarYeri\N11\N11Client;
+
+$client = new N11Client();
+$client->setApiKey('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
+$client->setApiPassword('xxxxxxxxxxxxxxxx');
+
+/* Anonymous function ile siparişleri almak */
+$client->webhook->orderConsume(function($order){
+	
+	echo "Sipariş Bilgileri";
+	echo "<pre>";
+	print_r($order);
+	echo "</pre>";
+	
+});
+
+/* Class ile siparişleri almak */
+
+Class N11Orders
+{
+	
+	public function consume($order)
+	{
+
+		echo "Sipariş Bilgileri";
+		echo "<pre>";
+		print_r($order);
+		echo "</pre>";	
+
+	}
+
+}
+
+$client->webhook->orderConsume(array(new N11Orders(), 'consume'));
+
 ```
