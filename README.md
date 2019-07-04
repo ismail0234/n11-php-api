@@ -22,7 +22,7 @@ N11 için yazılmış olan gelişmiş bir php apisi.
  * [Ürün Satış Durumu Servisi (ProductSellingService)](#ürün-satış-durumu-servisi-productsellingservice)
  * [Ürün Stok Servisi (ProductStockService)](#ürün-stok-servisi-productstockservice)
  * [Sipariş Servisi (Order Service)](#sipariş-servisi-order-service)
- * [N11 Sipariş Bildirimi WebHook (N11 Order WebHook)]
+ * [N11 Sipariş Bildirimi WebHook (N11 Order WebHook)](#n11-sipariş-bildirimi-webhook-n11-order-webhook)
 
 ## Kurulum
 
@@ -338,6 +338,40 @@ use IS\PazarYeri\N11\N11Client;
 $client = new N11Client();
 $client->setApiKey('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
 $client->setApiPassword('xxxxxxxxxxxxxxxx');
+
+/**
+ *
+ * @description Webhook istek hızı
+ * @param string 
+ * 	  'slow'   => 300 saniye,
+ *	  'medium' => 180 saniye (default/taviye edilen),
+ * 	  'fast'   => 60 saniye
+ * 	  'vfast'  => 30 saniye
+ * 	   
+ */
+$client->webhook->setRequestMode('medium');
+
+/**
+ *
+ * @description N11 sonuçlarında kaç siparişin getirileceği
+ * @param string 
+ * 	  'vmax'     => 100 adet,
+ *	  'max'      => 75 adet,
+ * 	  'medium'   => 50 adet (default/taviye edilen),
+ * 	  'min'      => 30 adet
+ * 	   
+ */
+$client->webhook->setResultMode('medium');
+
+/**
+ *
+ * @description Sipariş bildirimlerinde geçmiş siparişler kontrol edilsinmi?
+ * @param bool  
+ * 	  true     => Evet (default/Tavsiye edilen),
+ *	  false    => Hayır,
+ * 	   
+ */
+$client->webhook->setOldConsumeMode(true);
 
 /* Anonymous function ile siparişleri almak */
 $client->webhook->orderConsume(function($order){
