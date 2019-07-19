@@ -1,3 +1,6 @@
+#### Version 1.0.6
+* Webhook servisinde çalışmayan 3 fonksiyon için hatalı parametreleri düzeltildi.
+
 #### Version 1.0.5
 * WebHookService için BETA Sürüm Eklendi.
 * Tarih yazım hatası düzeltildi.
