@@ -171,7 +171,7 @@ Class WebHookService extends Helper\Database
 	 * @param string  
 	 *
 	 */
-	public function setRequestMode($mode)
+	public function setRequestMode($client, $mode)
 	{
 
 		switch ($mode) 
@@ -193,7 +193,7 @@ Class WebHookService extends Helper\Database
 	 * @param string 
 	 *
 	 */
-	public function setResultMode($mode)
+	public function setResultMode($client, $mode)
 	{
 
 		switch ($mode) 
@@ -215,7 +215,7 @@ Class WebHookService extends Helper\Database
 	 * @param string 
 	 *
 	 */
-	public function setOldConsumeMode($mode)
+	public function setOldConsumeMode($client, $mode)
 	{
 
 		$this->orderOldConsume = $mode == true ? true : false;
