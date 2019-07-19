@@ -4,7 +4,7 @@
 
 # N11 PHP Api
 
-N11 için yazılmış olan gelişmiş bir php apisi.
+Bu api n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php apisi. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
 
 ### Change Log
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/CHANGELOG.md)
@@ -22,7 +22,7 @@ N11 için yazılmış olan gelişmiş bir php apisi.
  * [Ürün Satış Durumu Servisi (ProductSellingService)](#ürün-satış-durumu-servisi-productsellingservice)
  * [Ürün Stok Servisi (ProductStockService)](#ürün-stok-servisi-productstockservice)
  * [Sipariş Servisi (Order Service)](#sipariş-servisi-order-service)
- * N11 Sipariş Bildirimi WebHook (N11 Order WebHook) - Yakında
+ * [N11 Sipariş Bildirimi WebHook (N11 Order WebHook)](#n11-sipariş-bildirimi-webhook-n11-order-webhook)
 
 ## Kurulum
 
@@ -323,4 +323,85 @@ $client->order->orderList(
  *
  */
 $client->order->orderDetail(123456789);
+```
+
+### N11 Sipariş Bildirimi WebHook (N11 Order WebHook)
+
+N11 Tarafından sipariş bildirimleri için bir webhook verilmediği için bu işlemi yapmak isteyenler kişiler için yazılmış olan bir webhook dur. Webhook'u kullanabilmeniz için sunucunuzda **sqlite** pdo driver kurulu olması gerekmektedir.
+
+**Not:** Oluşturacağınız bu dosyayı linux tarafında arkaplanda sürekli çalışır halde kalması gerekmektedir.
+
+```php
+
+include "vendor/autoload.php";
+
+use IS\PazarYeri\N11\N11Client;
+
+$client = new N11Client();
+$client->setApiKey('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
+$client->setApiPassword('xxxxxxxxxxxxxxxx');
+
+/**
+ *
+ * @description Webhook istek hızı
+ * @param string 
+ * 	  'slow'   => 300 saniye,
+ *	  'medium' => 180 saniye (default/taviye edilen),
+ * 	  'fast'   => 60 saniye
+ * 	  'vfast'  => 30 saniye
+ * 	   
+ */
+$client->webhook->setRequestMode('medium');
+
+/**
+ *
+ * @description N11 sonuçlarında kaç siparişin getirileceği
+ * @param string 
+ * 	  'vmax'     => 100 adet,
+ *	  'max'      => 75 adet,
+ * 	  'medium'   => 50 adet (default/taviye edilen),
+ * 	  'min'      => 30 adet
+ * 	   
+ */
+$client->webhook->setResultMode('medium');
+
+/**
+ *
+ * @description Sipariş bildirimlerinde geçmiş siparişler kontrol edilsinmi?
+ * @param bool  
+ * 	  true     => Evet (default/Tavsiye edilen),
+ *	  false    => Hayır,
+ * 	   
+ */
+$client->webhook->setOldConsumeMode(true);
+
+/* Anonymous function ile siparişleri almak */
+$client->webhook->orderConsume(function($order){
+	
+	echo "Sipariş Bilgileri";
+	echo "<pre>";
+	print_r($order);
+	echo "</pre>";
+	
+});
+
+/* Class ile siparişleri almak */
+
+Class N11Orders
+{
+	
+	public function consume($order)
+	{
+
+		echo "Sipariş Bilgileri";
+		echo "<pre>";
+		print_r($order);
+		echo "</pre>";	
+
+	}
+
+}
+
+$client->webhook->orderConsume(array(new N11Orders(), 'consume'));
+
 ```
