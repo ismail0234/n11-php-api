@@ -49,17 +49,6 @@ Class WebHookService extends Helper\Database
 
 	/**
 	 *
-	 * orderConsume çalıştırıldığında eski siparişler kontrol edilsinmi?
-	 *
-	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
-	 * @var bool 
-	 *
-	 */
-	protected $orderOldConsume = true;
-
-
-	/**
-	 *
 	 * Sipariş listesinden kaç adet sipariş getirileceği.
 	 *
 	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
@@ -343,14 +332,8 @@ Class WebHookService extends Helper\Database
 	protected function getOrderSettings($pageId)
 	{	
 
-		$oldPeriod = array();
-		if (!$this->orderOldConsume) {
-			$oldPeriod['startDate'] = date('d/m/Y H:i:s', $this->startedTime);
-			$oldPeriod['endDate']   = date('d/m/Y H:i:s', time() + $this->requestTime + 15);
-		}
-
 		return array(
-			'period'     => $oldPeriod,
+			'period'     => array(),
 			'pagingData' => array(
 				'currentPage' => $pageId,
 				'pageSize'    => $this->orderMaxResult
@@ -406,22 +389,6 @@ Class WebHookService extends Helper\Database
 				$this->orderMaxResult = 50;
 			break;
 		}
-
-	}
-
-	/**
-	 *
-	 * N11 Siparişlerinde eski eklenmeyen siparişler kontrol edilecekmi
-	 *
-	 * @author Ismail Satilmis <ismaiil_0234@hotmail.com>
-	 * @param Class $client
-	 * @param bool $mode 
-	 *
-	 */
-	public function setOldConsumeMode($client, $mode)
-	{
-
-		$this->orderOldConsume = $mode == true ? true : false;
 
 	}
 
