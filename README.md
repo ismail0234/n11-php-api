@@ -377,6 +377,7 @@ $client->webhook->setResultMode('medium');
  *	  false    => Hayır,
  * 	   
  */
+ // _**Uyarı! Bu fonksiyon versiyon 1.1.0'dan itibaren kaldırılmıştır.**_
 $client->webhook->setOldConsumeMode(true);
 
 /* Anonymous function ile siparişleri almak */
