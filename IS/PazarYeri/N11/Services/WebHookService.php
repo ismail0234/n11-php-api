@@ -266,7 +266,7 @@ Class WebHookService extends Helper\Database
 			return $this->getPageData($orders->pagingData->pageCount <= 0 ? 0 : $orders->pagingData->pageCount - 1, $orders, $list);
 		}
 
-		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($pageId)), $pageId, LAST_ORDER_ID);
+		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($pageId)), $pageId, $this->setting->lastOrderId);
 	}
 
 	/**
@@ -327,7 +327,7 @@ Class WebHookService extends Helper\Database
 
 
 
-		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings(PAGE_ID)), PAGE_ID, LAST_ORDER_ID);
+		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($this->setting->pageId)), $this->setting->pageId, $this->lastOrderId);
 
 	}
 
