@@ -1,0 +1,20 @@
+{
+    "name": "ismail0234/n11-php-api",
+    "description": "N11 PHP API",
+    "type": "library",
+    "keywords": ["n11", "eticaret", "php api", "n11 php api", "pazaryeri"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "İsmail Satilmiş",
+            "email": "ismaiil_0234@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "IS\\PazarYeri\\N11\\": "IS/PazarYeri/N11"
+        }
+    },
+    "minimum-stability": "stable"
+}
