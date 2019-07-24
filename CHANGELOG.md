@@ -1,3 +1,7 @@
+#### Version 1.1.0
+* Webhook için yapılacaklar tamamlandı [burada](https://github.com/ismail0234/n11-php-api/issues/1).
+* setOldConsumeMode artık gerekli olmadığından kaldırıldı.
+
 #### Version 1.0.6
 * Webhook servisinde çalışmayan 3 fonksiyon için hatalı parametreleri düzeltildi.
 
