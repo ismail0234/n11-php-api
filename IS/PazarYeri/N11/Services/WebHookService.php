@@ -208,8 +208,6 @@ Class WebHookService extends Helper\Database
 	 */
 	protected function getRealPageId($client, $orders, $pageId, $productId)
 	{
-		//düzenlenecek
-		global $lastOrderId;
 
 		/* seçilen sayfa içinde var ise */
 		$list = $this->getOrderFormat($orders);
@@ -229,7 +227,7 @@ Class WebHookService extends Helper\Database
 		$last  = end($list);
 
 		/* ürün id 2 sayfa arasında ise (20 ve 21 arası gibi) */
-		if ($lastOrderId != null && $productId > $lastOrderId && $productId < $first) {
+		if ($this->lastOrderId != null && $productId > $this->lastOrderId && $productId < $first) {
 			return $this->getPageData($pageId, $orders, $list);
 		}
 
@@ -243,7 +241,7 @@ Class WebHookService extends Helper\Database
 			$pageId++;
 		}
 
-		$lastOrderId = $last;
+		$this->lastOrderId = $last;
 
 		/* sayfa 0'dan küçük ise */
 		if ($pageId < 0) {
@@ -314,8 +312,7 @@ Class WebHookService extends Helper\Database
 	protected function getPagination($client)
 	{
 
-
-
+		$this->lastOrderId = null;
 		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($this->setting->pageId)), $this->setting->pageId, $this->lastOrderId);
 
 	}
