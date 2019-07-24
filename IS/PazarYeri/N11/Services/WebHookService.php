@@ -313,7 +313,7 @@ Class WebHookService extends Helper\Database
 	{
 
 		$this->lastOrderId = null;
-		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($this->setting->pageId)), $this->setting->pageId, $this->lastOrderId);
+		return $this->getRealPageId($client, $this->order->orderList($client, $this->getOrderSettings($this->setting->pageId)), $this->setting->pageId, $this->setting->lastOrderId);
 
 	}
 
