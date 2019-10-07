@@ -2,9 +2,10 @@
 
 namespace IS\PazarYeri\N11\Services;
 
-use IS\PazarYeri\N11\Helper;
+use IS\PazarYeri\N11\Helper\Database;
+use IS\PazarYeri\N11\Helper\N11Exception;
 
-Class WebHookService extends Helper\Database
+Class WebHookService extends Database
 {
 
 	/**
@@ -152,7 +153,6 @@ Class WebHookService extends Helper\Database
 
 						$this->finishOrder($order->id);
 						$this->updateOrder($order->id);
-
 					}
 
 					$this->updatePageId($pageId);
