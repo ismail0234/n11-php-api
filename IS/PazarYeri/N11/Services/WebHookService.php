@@ -297,7 +297,12 @@ Class WebHookService extends Database
 			throw new N11Exception("Sipariş Listesi Alınamadı. Hata => " . $orders->result->errorMessage);
 		}
 
-		return $orders->orderList->order;
+		$orderList = $orders->orderList->order;
+		if (is_object($orders->orderList->order)) {
+			$orderList = array($orders->orderList->order);
+		}
+
+		return $orderList;
 	}
 
 	/**
