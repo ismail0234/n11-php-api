@@ -290,11 +290,11 @@ Class WebHookService extends Database
 
 		$orders = $this->order->orderList($client, $this->getOrderSettings($pageId));
 		if (!isset($orders->result)) {
-			throw new N11Exception("Sipariş Listesi Alınamadı.");
+			throw new Helper\N11Exception("Sipariş Listesi Alınamadı.");
 		}
 
 		if ($orders->result->status != "success") {
-			throw new N11Exception("Sipariş Listesi Alınamadı. Hata => " . $orders->result->errorMessage);
+			throw new Helper\N11Exception("Sipariş Listesi Alınamadı. Hata => " . $orders->result->errorMessage);
 		}
 
 		$orderList = $orders->orderList->order;
