@@ -268,6 +268,10 @@ Class WebHookService extends Database
 	protected function getOrderFormat($orders)
 	{
 
+		if (!isset($orders->orderList->order)) {
+			return array();
+		}
+
 		$orderList = array($orders->orderList->order);
 		if (is_array($orders->orderList->order)) {
 			$orderList = $orders->orderList->order;
