@@ -6,6 +6,12 @@
 
 Bu api n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php apisi. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
 
+## Katkı Çağrısı
+
+Çok fazla vaktim olmadığından N11'in bütün api fonksiyonları tamamlanmamıştır. Eksik fonksiyonları isterseniz tamamlayarak **pull request** gönderebilirsiniz veya istediğiniz fonksiyonun eklenmesi için **issue** açabilirsiniz. 
+
+**Unutmayın bu projeyi ücretsiz olarak yaptığımdan hemen yapacağım diye bir şey olamaz!**
+
 ### Change Log
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/CHANGELOG.md)
 
