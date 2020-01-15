@@ -48,9 +48,9 @@ composer require ismail0234/n11-php-api
 
 ```php
 
-include "vendor/autoload.php";
-
 use IS\PazarYeri\N11\N11Client;
+
+include "vendor/autoload.php";
 
 $client = new N11Client();
 $client->setApiKey('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx');
