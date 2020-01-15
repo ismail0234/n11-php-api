@@ -4,7 +4,7 @@
 
 # N11 PHP Api
 
-Bu api n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php apisi. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
+Bu api n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php entegrasyon apisi. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
 
 ## Patron Olun ve Beni Destekleyin!
 
