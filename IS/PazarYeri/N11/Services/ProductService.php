@@ -47,6 +47,19 @@ Class ProductService
 		return $client->sendRequest('getProductList', array('pagingData' => $pagination));
 
 	}
+	
+	/**
+	 *
+	 * @description Mağaza'ya yeni ürün eklemek için kullanılır
+	 *
+	 */
+
+	public function SaveProduct($client, $product = array()) {
+		
+		return $client->sendRequest('SaveProduct', array('product' => $product));
+		
+	}
+
 
 	/**
 	 *
