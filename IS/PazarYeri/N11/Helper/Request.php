@@ -84,8 +84,6 @@ Class Request
 			unset($data['auth']);
 		}
 
-		dd($method);
-
 		$result = $this->client->call($method, array(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data)), '', '', false, true);
 		
 		if ($this->client->fault) {
