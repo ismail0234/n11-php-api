@@ -1,7 +1,6 @@
 <?php
 
 namespace IS\PazarYeri\N11\Helper;
-require_once('nusoap.php');
 
 Class Request
 {
@@ -58,15 +57,13 @@ Class Request
 	 */
 	public function connectSoap()
 	{
-		$this->client = new \nusoap_client($this->serviceUrl);
-		$err = $this->client->getError();
 
-		if ($err) {
-			throw new N11Exception("SOAP Oturumu Başarısız");
-		}else{
+		try {
+			$this->client = new \SoapClient($this->serviceUrl, array("trace" => 1, "exception" => false, 'cache_wsdl' => WSDL_CACHE_NONE));
 			return true; 
+		} catch (\Exception $e) {
+			throw new N11Exception("SOAP Oturumu Başarısız");
 		}
-
 
 	}
 
@@ -84,20 +81,12 @@ Class Request
 			unset($data['auth']);
 		}
 
-		dd($method);
-
-		$result = $this->client->call($method, array(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data)), '', '', false, true);
-		
-		if ($this->client->fault) {
-			throw new N11Exception($result);
-		}else {
-			$err = $this->client->getError();
-			if ($err) {
-				throw new N11Exception($err);
-			}else {
-				return $result;
-			}
-		}
+		try {
+			return $this->client->$method(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data));
+		} catch (\Exception $e) {
+			throw new N11Exception($e->getMessage());
+			
+		}	
 
 	}
 
