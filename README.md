@@ -212,6 +212,115 @@ $client->product->getProductList(array('currentPage' => 0, 'pageSize' => 20));
 
 /**
  *
+ * @description Mağazaya yeni ürün eklemek için kullanılır.
+ * @param array eklenecek ürün bilgileri - Zorunlu
+ *
+ */
+$client->product->SaveProduct(array (
+          'productSellerCode' => 'Deneme1234567',
+          'title' => 'Lorem Ipsum',
+          'subtitle' => 'Lorem ipsum dolor sit ame',
+          'description' => 'Hello World',
+          'domestic' => 'true',
+          'category' => 
+          array (
+            'id' => '1000476',
+          ),
+          'specialProductInfoList' => 
+          array (
+            'specialProductInfo' => 
+            array (
+              'key' => '?',
+              'value' => '?',
+            ),
+          ),
+          'price' => '3000',
+          'currencyType' => '1',
+          'images' => 
+          array (
+            'image' => 
+            array (
+              'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg?format=auto&quality=60&f=800x0',
+              'order' => '1',
+            ),
+          ),
+          'approvalStatus' => '1',
+          'attributes' => 
+          array (
+            'attribute' => 
+            array (
+              0 => 
+              array (
+                'name' => 'Marka',
+                'value' => 'Apple',
+              ),
+              1 => 
+              array (
+                'name' => 'Renk',
+                'value' => 'Mavi',
+              ),
+              2 => 
+              array (
+                'name' => 'Dahili Hafiza',
+                'value' => '16 GB',
+              ),
+            ),
+          ),
+          'saleStartDate' => '',
+          'saleEndDate' => '',
+          'productionDate' => '',
+          'expirationDate' => '',
+          'productCondition' => '1',
+          'preparingDay' => '3',
+          'discount' => 
+          array (
+            'startDate' => '',
+            'endDate' => '',
+            'type' => '',
+            'value' => '',
+          ),
+          'shipmentTemplate' => 'termos',
+          'stockItems' => 
+          array (
+            'stockItem' => 
+            array (
+              'bundle' => 'false',
+              'mpn' => '',
+              'gtin' => '0885909808830',
+              'oem' => '',
+              'quantity' => '5',
+              'sellerStockCode' => 'StokKodu1234567890',
+              'attributes' => 
+              array (
+                'attribute' => 
+                array (
+                  0 => 
+                  array (
+                    'name' => 'Marka',
+                    'value' => 'Apple',
+                  ),
+                  1 => 
+                  array (
+                    'name' => 'Renk',
+                    'value' => 'Mavi',
+                  ),
+                  2 => 
+                  array (
+                    'name' => 'Dahili Hafiza',
+                    'value' => '16 GB',
+                  ),
+                ),
+              ),
+              'optionPrice' => '3000',
+            ),
+          ),
+          'groupAttribute' => "",
+          'groupItemCode' => "",
+          'itemName' => ""
+        ));
+
+/**
+ *
  * @description Kayıtlı olan bir ürünü N11 Id si kullanarak silmek için kullanılır.
  * @param int N11 Ürün Id - Zorunlu
  *
