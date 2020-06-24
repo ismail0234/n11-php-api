@@ -20,7 +20,7 @@ Class ProductSellingService
 	public function stopSellingProductByProductId($client, $productId)
 	{	
 
-		return $client->sendRequest('stopSellingProductByProductId', array('productId' => $productId));
+		return $client->sendRequest('StopSellingProductByProductId', array('productId' => $productId));
 
 	}	
 
@@ -32,7 +32,7 @@ Class ProductSellingService
 	public function startSellingProductBySellerCode($client, $productSellerCode)
 	{	
 
-		return $client->sendRequest('startSellingProductBySellerCode', array('productSellerCode' => $productSellerCode));
+		return $client->sendRequest('StartSellingProductBySellerCode', array('productSellerCode' => $productSellerCode));
 
 	}
 
@@ -44,7 +44,7 @@ Class ProductSellingService
 	public function startSellingProductByProductId($client, $productId)
 	{	
 
-		return $client->sendRequest('startSellingProductByProductId', array('productId' => $productId));
+		return $client->sendRequest('StartSellingProductByProductId', array('productId' => $productId));
 
 	}
 
@@ -56,7 +56,7 @@ Class ProductSellingService
 	public function stopSellingProductBySellerCode($client, $productSellerCode)
 	{	
 
-		return $client->sendRequest('stopSellingProductBySellerCode', array('productSellerCode' => $productSellerCode));
+		return $client->sendRequest('StopSellingProductBySellerCode', array('productSellerCode' => $productSellerCode));
 
 	}
 	

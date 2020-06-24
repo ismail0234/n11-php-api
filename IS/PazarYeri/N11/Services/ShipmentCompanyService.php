@@ -20,7 +20,7 @@ Class ShipmentCompanyService
 	public function getShipmentCompanies($client)
 	{	
 
-		return $client->sendRequest('getShipmentCompanies');
+		return $client->sendRequest('GetShipmentCompanies');
 
 	}
 

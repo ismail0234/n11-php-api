@@ -58,7 +58,10 @@ Class Request
 	 */
 	public function connectSoap()
 	{
-		$this->client = new \nusoap_client($this->serviceUrl);
+		$this->client = new \nusoap_client($this->serviceUrl,'wsdl');
+		$this->client->soap_defencoding = 'UTF-8';
+		$this->client->decode_utf8 = false;
+
 		$err = $this->client->getError();
 
 		if ($err) {

@@ -23,7 +23,7 @@ Class ProductStockService
 	public function getProductStockByProductId($client, $productId)
 	{	
 
-		return $client->sendRequest('getProductStockByProductId', array('productId' => $productId));
+		return $client->sendRequest('GetProductStockByProductId', array('productId' => $productId));
 
 	}	
 	

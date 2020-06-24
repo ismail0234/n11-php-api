@@ -20,7 +20,7 @@ Class ShipmentService
 	public function getShipmentTemplateList($client)
 	{	
 
-		return $client->sendRequest('getShipmentTemplateList');
+		return $client->sendRequest('GetShipmentTemplateList');
 
 	}	
 
@@ -32,7 +32,7 @@ Class ShipmentService
 	public function getShipmentTemplate($client, $name)
 	{	
 
-		return $client->sendRequest('getShipmentTemplate', array('name' => $name));
+		return $client->sendRequest('GetShipmentTemplate', array('name' => $name));
 
 	}
 
