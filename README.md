@@ -23,6 +23,7 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Hızlı Bakış
