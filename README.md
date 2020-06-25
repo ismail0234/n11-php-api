@@ -10,19 +10,10 @@ Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php 
 
 Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz: https://www.patreon.com/botbenson/
 
-## Katkı Çağrısı
+## Katkı Çağrısı (Katkıda Bulunanlar)
 
 Çok fazla vaktim olmadığından N11'in bütün API fonksiyonları tamamlanmamıştır. Eksik fonksiyonları isterseniz tamamlayarak **pull request** gönderebilirsiniz veya istediğiniz fonksiyonun eklenmesi için **issue** açabilirsiniz. 
 
-**Unutmayın bu projeyi ücretsiz olarak yaptığımdan hemen yapacağım diye bir şey olamaz!**
-
-### Change Log
-- See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/CHANGELOG.md)
-
-### License
-- See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
-
-### Katkıda Bulunanlar
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -35,6 +26,12 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+### Change Log
+- See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/CHANGELOG.md)
+
+### License
+- See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
 
 ## Hızlı Bakış
  * [Kurulum](#kurulum)
