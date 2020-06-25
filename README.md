@@ -2,7 +2,7 @@
 [![Total Downloads](https://poser.pugx.org/ismail0234/n11-php-api/downloads)](https://packagist.org/packages/ismail0234/n11-php-api)
 [![License](https://poser.pugx.org/ismail0234/n11-php-api/license)](https://packagist.org/packages/ismail0234/n11-php-api)
 
-# N11 PHP Api
+# N11 PHP API
 
 Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php entegrasyon API'si. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
 
