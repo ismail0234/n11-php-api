@@ -23,7 +23,6 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-x
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 [![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/0)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/0)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/1)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/1)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/2)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/2)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/3)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/3)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/4)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/4)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/5)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/5)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/6)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/6)[![](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/images/7)](https://sourcerer.io/fame/ismail0234/ismail0234/n11-php-api/links/7)
