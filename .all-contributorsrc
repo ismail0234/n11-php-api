@@ -14,7 +14,7 @@
       "link": "[<%= symbol %>](<%= url %> \"<%= description %>\"),"
     }
   },
-  "skipCi": true,
+  "skipCi": false,
   "contributors": [
     {
       "login": "ahmetcadirci25",
