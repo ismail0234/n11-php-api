@@ -22,7 +22,7 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 ### License
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
 
-
+### Katkıda Bulunanlar
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -35,15 +35,6 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## Hızlı Bakış
  * [Kurulum](#kurulum)
