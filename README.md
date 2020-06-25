@@ -23,8 +23,7 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/LICENSE)
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+<a href=\"<%= contributor.profile %>\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><sub><b><%= contributor.name %></b></sub></a>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Hızlı Bakış
