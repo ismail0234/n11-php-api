@@ -2,6 +2,11 @@
   "files": [
     "README.md"
   ],
+  "projectName": "n11-php-api",
+  "projectOwner": "ismail0234",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "commit": false,
   "imageSize": 100,
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": false,
@@ -14,7 +19,7 @@
       "link": "[<%= symbol %>](<%= url %> \"<%= description %>\"),"
     }
   },
-  "skipCi": true,
+  "skipCi": false,
   "contributors": [
     {
       "login": "ahmetcadirci25",
@@ -26,9 +31,5 @@
         "bug"
       ]
     }
-  ],
-  "projectName": "n11-php-api",
-  "projectOwner": "ismail0234",
-  "repoType": "github",
-  "repoHost": "https://github.com"
+  ]
 }
