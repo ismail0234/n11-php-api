@@ -14,19 +14,6 @@ Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz:
 
 Çok fazla vaktim olmadığından N11'in bütün API fonksiyonları tamamlanmamıştır. Eksik fonksiyonları isterseniz tamamlayarak **pull request** gönderebilirsiniz veya istediğiniz fonksiyonun eklenmesi için **issue** açabilirsiniz. 
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://ahmetcadirci.com.tr"><img src="https://avatars2.githubusercontent.com/u/9280397?v=4" width="100px;" alt=""/><br /><sub><b>Ahmet Çadırcı</b></sub></a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ### Change Log
 - See [ChangeLog](https://github.com/ismail0234/n11-php-api/blob/master/CHANGELOG.md)
 
