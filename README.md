@@ -6,9 +6,14 @@
 
 Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php entegrasyon API'si. Ekstra olarak n11 üzerinde mağazanıza gelen siparişleri websitenize aktaracak bir fonksiyonda mevcuttur.
 
-## Patron Olun ve Beni Destekleyin!
+## Bağış Yapın
 
-Yaptığım işlerden memnun iseniz, beni patreon üzerinde desteleyebilirsiniz: https://www.patreon.com/botbenson/
+Yaptığım işlerden memnun iseniz, daha iyi ve daha iş çıkartmam için beni destekleyebilirsiniz;
+
+* 10 TL Bağış => https://shipy.link/y/E92jtcP1
+* 20 TL Bağış => https://shipy.link/y/SWCJ5bFO
+* 50 TL Bağış => https://shipy.link/y/p2kwrO6i
+* 100 TL Bağış => https://shipy.link/y/6QJDuAoL
 
 ## Katkı Çağrısı (Katkıda Bulunanlar)
 
