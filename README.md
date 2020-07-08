@@ -8,7 +8,7 @@ Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php 
 
 ## Bağış Yapın
 
-Yaptığım işlerden memnun iseniz, daha iyi ve daha iş çıkartmam için beni destekleyebilirsiniz;
+Yaptığım işlerden memnun iseniz, daha iyi ve daha çok iş çıkartmam için beni destekleyebilirsiniz;
 
 * 10 TL Bağış => https://shipy.link/y/E92jtcP1
 * 20 TL Bağış => https://shipy.link/y/SWCJ5bFO
