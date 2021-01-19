@@ -10,10 +10,9 @@ Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php 
 
 Yaptığım işlerden memnun iseniz, daha iyi ve daha çok iş çıkartmam için beni destekleyebilirsiniz;
 
-* 10 TL Bağış => https://shipy.link/y/E92jtcP1
-* 20 TL Bağış => https://shipy.link/y/SWCJ5bFO
-* 50 TL Bağış => https://shipy.link/y/p2kwrO6i
-* 100 TL Bağış => https://shipy.link/y/6QJDuAoL
+## Discord
+
+Discord sunucumuza katılmak isterseniz hepinizi bekleriz; https://discord.gg/botbenson
 
 ## Katkı Çağrısı (Katkıda Bulunanlar)
 
