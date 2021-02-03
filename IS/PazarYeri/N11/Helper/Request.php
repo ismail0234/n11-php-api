@@ -48,7 +48,7 @@ Class Request
 		$this->serviceUrl  = $serviceUrl;
 
 	}
-
+	
 	/**
 	 *
 	 * @description SOAP Oturumunu Başlatma
@@ -63,14 +63,11 @@ Class Request
 		$this->client->decode_utf8 = false;
 
 		$err = $this->client->getError();
-
 		if ($err) {
 			throw new N11Exception("SOAP Oturumu Başarısız");
 		}else{
 			return true; 
 		}
-
-
 	}
 
 	/**
@@ -88,7 +85,7 @@ Class Request
 		}
 
 		$result = $this->client->call($method, array(array_merge(array('auth' => array('appKey' => $this->apiKey, 'appSecret' => $this->apiPassword)), $data)), '', '', false, true);
-		
+
 		if ($this->client->fault) {
 			throw new N11Exception($result);
 		}else {
@@ -101,6 +98,4 @@ Class Request
 		}
 
 	}
-
-
 }

@@ -54,7 +54,6 @@ http://www.nusphere.com
 /* load classes
 
 // necessary classes
-require_once('class.soapclient.php');
 require_once('class.soap_val.php');
 require_once('class.soap_parser.php');
 require_once('class.soap_fault.php');
@@ -71,7 +70,7 @@ require_once('class.soap_server.php');*/
 
 // class variable emulation
 // cf. http://www.webkreator.com/php/techniques/php-static-class-variables.html
-$GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'] = 9;
+$GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'] = 1;
 
 
 /**
@@ -98,7 +97,7 @@ class nusoap_base
      * @var string
      * @access private
      */
-    var $version = '0.9.5';
+    var $version = '0.9.11';
     /**
      * CVS revision for HTTP headers.
      *
@@ -150,7 +149,8 @@ class nusoap_base
      * @var      string
      * @access   public
      */
-    var $soap_defencoding = 'UTF-8';
+    var $soap_defencoding = 'ISO-8859-1';
+    //var $soap_defencoding = 'UTF-8';
 
     /**
      * namespaces in an array of prefix => uri
@@ -1104,8 +1104,8 @@ class nusoap_fault extends nusoap_base
             '<SOAP-ENV:Body>' .
             '<SOAP-ENV:Fault>' .
             $this->serialize_val($this->faultcode, 'faultcode') .
-            $this->serialize_val($this->faultactor, 'faultactor') .
             $this->serialize_val($this->faultstring, 'faultstring') .
+            $this->serialize_val($this->faultactor, 'faultactor') .
             $this->serialize_val($this->faultdetail, 'detail') .
             '</SOAP-ENV:Fault>' .
             '</SOAP-ENV:Body>' .
@@ -2679,7 +2679,7 @@ class soap_transport_http extends nusoap_base
      * @access   public
      * @deprecated
      */
-    function sendHTTPS($data, $timeout = 0, $response_timeout = 30, $cookies)
+    function sendHTTPS($data, $timeout = 0, $response_timeout = 30, $cookies = NULL)
     {
         return $this->send($data, $timeout, $response_timeout, $cookies);
     }
@@ -6293,7 +6293,9 @@ class wsdl extends nusoap_base
                 $rows = sizeof($value);
                 $contents = '';
                 foreach ($value as $k => $v) {
-                    $this->debug("serializing array element: $k, " . (is_array($v) ? "array" : $v) . " of type: $typeDef[arrayType]");
+                    //$this->debug breaks when serializing ArrayOfComplexType
+                    //Error: Object of class [COMPLEX-TYPE] could not be converted to string
+                    //$this->debug("serializing array element: $k, " . (is_array($v) ? "array" : $v) . " of type: $typeDef[arrayType]");
                     //if (strpos($typeDef['arrayType'], ':') ) {
                     if (!in_array($typeDef['arrayType'], $this->typemap['http://www.w3.org/2001/XMLSchema'])) {
                         $contents .= $this->serializeType('item', $typeDef['arrayType'], $v, $use);
@@ -7439,7 +7441,7 @@ class nusoap_client extends nusoap_base
      * @param    string $portName optional portName in WSDL document
      * @access   public
      */
-    function __construct($endpoint, $wsdl = false, $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = '')
+    function __construct($endpoint, $wsdl = true, $proxyhost = false, $proxyport = false, $proxyusername = false, $proxypassword = false, $timeout = 0, $response_timeout = 30, $portName = '')
     {
         parent::__construct();
         $this->endpoint = $endpoint;

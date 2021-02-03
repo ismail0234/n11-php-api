@@ -1,3 +1,6 @@
+#### Version 1.1.3
+* SOAP istekleri ve ürün ekleme ile ilgili sorunlar giderildi
+
 #### Version 1.1.2
 * Webhook sqlite şişme sorunu düzeltildi.
 * Helper namespace webhookservice dosyasında düzenlendi.

@@ -55,7 +55,6 @@ Class ProductService
 	 */
 
 	public function SaveProduct($client, $product = array()) {
-		
 		return $client->sendRequest('SaveProduct', array('product' => $product));
 		
 	}

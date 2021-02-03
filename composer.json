@@ -10,7 +10,9 @@
             "email": "ismaiil_0234@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+	    "darkfriend/php7-xml": "^1.0"
+	},
     "autoload": {
         "psr-4": {
             "IS\\PazarYeri\\N11\\": "IS/PazarYeri/N11"
