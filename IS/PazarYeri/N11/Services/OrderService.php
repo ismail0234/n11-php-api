@@ -68,7 +68,7 @@ Class OrderService
 			$query['pagingData'] = $data['pagingData'];
 		}
 
-		return $client->sendRequest('orderList', $query);
+		return $client->sendRequest('OrderList', $query);
 
 	}	
 
@@ -81,7 +81,7 @@ Class OrderService
 	public function orderDetail($client, $Id)
 	{	
 
-		return $client->sendRequest('orderDetail', array('orderRequest' => array('id' => $Id)));
+		return $client->sendRequest('OrderDetail', array('orderRequest' => array('id' => $Id)));
 
 	}	
 	

@@ -222,6 +222,134 @@ $client->product->getProductList(array('currentPage' => 0, 'pageSize' => 20));
 
 /**
  *
+ * @description Mağazaya yeni ürün eklemek için kullanılır.
+ * @param array eklenecek ürün bilgileri - Zorunlu
+ *
+ */
+$client->product->SaveProduct(
+					array(
+						'productSellerCode' => 'TF23094823',
+						'title' => 'Mavi Toparlayıcı Efekt Skinny Pantolon',
+						'subtitle' => 'Curabitur blandit consequat libero, ac suscipit leo luctusrfggfgf',
+						'description' => 'Curabitur blandit consequat libero, ac suscipit leo luctus eget. Etiam condimentum augue at quam sagittis bibendum. Quisque vitae malesuada urna. Proi',
+						'domestic' => 'false',
+						'category' => array(
+							'id' => '1002201'
+						),
+						'specialProductInfoList' => array(
+							'specialProductInfo' => array(
+								'key' => '?',
+								'value' => '?',
+							)
+						),
+						'price' => '185.00',
+						'currencyType' => '1',
+						'images' => array(
+							'image' => array(
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '1',
+								),
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '2',
+								),
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '3',
+								),
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '4',
+								),
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '5',
+								),
+								array(
+									'url' => 'https://contents.mediadecathlon.com/p1058366/k20d731c11ef86aad6039daa20fb66dc3/1058366_default.jpg',
+									'order' => '6',
+								)
+							)
+						),
+						'approvalStatus' => '1',
+						'attribute' => array(),
+						'saleStartDate' => '',
+						'saleEndDate' => '',
+						'productionDate' => '',
+						'expirationDate' => '',
+						'productCondition' => 1,
+						'preparingDay' => 3,
+						'discount' => array(
+							'startDate' => '',
+							'endDate' => '',
+							'type' => '',
+							'value' => '',
+						),
+						'shipmentTemplate' => 'termos',
+						'stockItems' => array(
+							'stockItem' => array(
+								array(
+									'bundle' => 'false',
+									'mpn' => '112',
+									'gtin' => '0190198066473',
+									'oem' => '',
+									'quantity' => '855',
+									'n11CatalogId' => '',
+									'sellerStockCode' => '112',
+									'optionPrice' => '185.00',
+									'attributes' => array(
+										'attribute' => array(
+											array(
+												'name' => 'Sezon',
+												'value' => '2013 Sonbahar-Kış'
+											),
+											array(
+												'name' => 'Cinsiyet',
+												'value' => 'Erkek',
+											),
+											array(
+												'name' => 'Beden',
+												'value' => '145',
+											),
+											array(
+												'name' => 'Desen',
+												'value' => 'Nakışlı',
+											),
+											array(
+												'name' => 'Ürün_Detayı',
+												'value' => 'Kapüşonlu',
+											),
+											array(
+												'name' => 'İçerik',
+												'value' => 'Brode,Brokar,İnterlok',
+											),
+											array(
+												'name' => 'Marka',
+												'value' => 'Esteem',
+											),
+											array(
+												'name' => 'Renk',
+												'value' => 'Gri',
+											)
+										)
+									)
+								)
+							)
+						),
+						'unitInfo' => array(
+							'unitType' => '',
+							'unitWeight' => ''
+						),
+						'maxPurchaseQuantity' => '122',
+						'groupAttribute' => '',
+						'groupItemCode' => '',
+						'itemName' => ''
+					)
+				);
+
+/**
+ *
  * @description Kayıtlı olan bir ürünü N11 Id si kullanarak silmek için kullanılır.
  * @param int N11 Ürün Id - Zorunlu
  *

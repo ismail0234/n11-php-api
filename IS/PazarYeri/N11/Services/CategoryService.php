@@ -20,7 +20,7 @@ Class CategoryService
 	public function getTopLevelCategories($client)
 	{	
 
-		return $client->sendRequest('getTopLevelCategories');
+		return $client->sendRequest('GetTopLevelCategories');
 
 	}
 
@@ -30,10 +30,10 @@ Class CategoryService
 	 *				ve bu özelliklere ait değerlerin listelenmesi için kullanılan metottur.
 	 *
 	 */
-	public function getCategoryAttributes($client, $categoryId, $pagination = array())
+	public function GetCategoryAttributes($client, $categoryId, $pagination = array())
 	{	
 
-		return $client->sendRequest('getCategoryAttributes', array('categoryId' => $categoryId, 'pagingData' => $pagination));
+		return $client->sendRequest('GetCategoryAttributes', array('categoryId' => $categoryId, 'pagingData' => $pagination));
 
 	}	
 
@@ -43,10 +43,10 @@ Class CategoryService
 	 * 				bu kategorilere ait olan özelliklerin listelenmesi için kullanılan metoddur.
 	 *
 	 */
-	public function getCategoryAttributesId($client, $categoryId)
+	public function GetCategoryAttributesId($client, $categoryId)
 	{	
 
-		return $client->sendRequest('getCategoryAttributesId', array('categoryId' => $categoryId));
+		return $client->sendRequest('GetCategoryAttributesId', array('categoryId' => $categoryId));
 
 	}
 
@@ -56,10 +56,10 @@ Class CategoryService
 	 *				o özelliğe ait değerleri listeler.
 	 *
 	 */
-	public function getCategoryAttributeValue($client, $attributeId, $pagination = array())
+	public function GetCategoryAttributeValue($client, $attributeId, $pagination = array())
 	{	
 
-		return $client->sendRequest('getCategoryAttributeValue', array('categoryProductAttributeId' => $attributeId, 'pagingData' => $pagination));
+		return $client->sendRequest('GetCategoryAttributeValue', array('categoryProductAttributeId' => $attributeId, 'pagingData' => $pagination));
 
 	}
 
@@ -73,7 +73,7 @@ Class CategoryService
 	public function getParentCategory($client, $categoryId)
 	{	
 
-		return $client->sendRequest('getParentCategory', array('categoryId' => $categoryId));
+		return $client->sendRequest('GetParentCategory', array('categoryId' => $categoryId));
 
 	}
 
@@ -87,7 +87,7 @@ Class CategoryService
 	public function getSubCategories($client, $categoryId)
 	{	
 
-		return $client->sendRequest('getSubCategories', array('categoryId' => $categoryId));
+		return $client->sendRequest('GetSubCategories', array('categoryId' => $categoryId));
 
 	}
 

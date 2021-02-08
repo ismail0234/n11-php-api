@@ -10,7 +10,6 @@
             "email": "ismaiil_0234@hotmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "IS\\PazarYeri\\N11\\": "IS/PazarYeri/N11"

@@ -20,7 +20,7 @@ Class ProductService
 	public function getProductByProductId($client, $productId)
 	{	
 
-		return $client->sendRequest('getProductByProductId', array('productId' => $productId));
+		return $client->sendRequest('GetProductByProductId', array('productId' => $productId));
 
 	}
 	
@@ -32,7 +32,7 @@ Class ProductService
 	public function getProductBySellerCode($client, $sellerCode)
 	{	
 
-		return $client->sendRequest('getProductBySellerCode', array('sellerCode' => $sellerCode));
+		return $client->sendRequest('GetProductBySellerCode', array('sellerCode' => $sellerCode));
 
 	}	
 
@@ -44,9 +44,21 @@ Class ProductService
 	public function getProductList($client, $pagination = array())
 	{	
 
-		return $client->sendRequest('getProductList', array('pagingData' => $pagination));
+		return $client->sendRequest('GetProductList', array('pagingData' => $pagination));
 
 	}
+	
+	/**
+	 *
+	 * @description Mağaza'ya yeni ürün eklemek için kullanılır
+	 *
+	 */
+
+	public function SaveProduct($client, $product = array()) {
+		return $client->sendRequest('SaveProduct', array('product' => $product));
+		
+	}
+
 
 	/**
 	 *
@@ -56,7 +68,7 @@ Class ProductService
 	public function deleteProductById($client, $productId)
 	{	
 
-		return $client->sendRequest('deleteProductById', array('productId' => $productId));
+		return $client->sendRequest('DeleteProductById', array('productId' => $productId));
 
 	}
 
@@ -68,7 +80,7 @@ Class ProductService
 	public function deleteProductBySellerCode($client, $productSellerCode)
 	{	
 
-		return $client->sendRequest('deleteProductBySellerCode', array('productSellerCode' => $productSellerCode));
+		return $client->sendRequest('DeleteProductBySellerCode', array('productSellerCode' => $productSellerCode));
 
 	}	
 

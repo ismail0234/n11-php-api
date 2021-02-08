@@ -20,7 +20,7 @@ Class CityService
 	public function getCities($client)
 	{	
 
-		return $client->sendRequest('getCities');
+		return $client->sendRequest('GetCities');
 
 	}
 
@@ -33,7 +33,7 @@ Class CityService
 	public function getCity($client, $cityId)
 	{	
 
-		return $client->sendRequest('getCity', array('cityCode' => $cityId));
+		return $client->sendRequest('GetCity', array('cityCode' => $cityId));
 
 	}
 
@@ -46,7 +46,7 @@ Class CityService
 	public function getDistrict($client, $cityId)
 	{	
 
-		return $client->sendRequest('getDistrict', array('cityCode' => $cityId));
+		return $client->sendRequest('GetDistrict', array('cityCode' => $cityId));
 
 	}
 
@@ -59,7 +59,7 @@ Class CityService
 	public function getNeighborhoods($client, $districtId)
 	{	
 
-		return $client->sendRequest('getNeighborhoods', array('districtId' => $districtId));
+		return $client->sendRequest('GetNeighborhoods', array('districtId' => $districtId));
 
 	}
 
