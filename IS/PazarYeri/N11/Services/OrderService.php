@@ -85,4 +85,47 @@ Class OrderService
 
 	}	
 	
+	/**
+     *
+     * @description Sipariş N11 ID bilgisi kullanarak sipariş detaylarını almak için kullanılır,
+     *                sipariş N11 ID bilgisine orderList metotlarıyla ulaşılabilir.
+     *
+     * <code>
+     *  $payload = [
+     *      'numberOfPackages' => '1',
+     *  ];
+     *  foreach ($orderItems as $item) {
+     *       $payload['orderItemList']['orderItem'][] = [
+     *           'id' => $item['id'],
+     *       ];
+     *  }
+     *  </code>
+     * @param $client Request
+     * @param $data array{numberOfPackages: int,orderItemList: array{orderItem: array{id: int}}
+     */
+    public function acceptOrder($client, $data)
+    {
+        return $client->sendRequest('OrderItemAccept', $data);
+    }
+
+    /**
+     *
+     * @description Sipariş N11 ID bilgisi kullanarak sipariş detaylarını almak için kullanılır,
+     *                sipariş N11 ID bilgisine orderList metotlarıyla ulaşılabilir.
+     *
+     *<code>
+     *   $payload = [];
+     *   foreach ($orderItems as $item) {
+     *        $payload['orderItemList']['orderItem'][] = [
+     *            'id' => $item['id'],
+     *        ];
+     *   }
+     *</code>
+     * @param $client Request
+     * @param $data array{orderItemList: array{orderItem: array{id: int}}
+     */
+    public function seperateCombinedItems($client, $data)
+    {
+        return $client->sendRequest('SeperateCombinedItems', $data);
+    }
 }
