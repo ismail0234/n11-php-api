@@ -87,8 +87,7 @@ Class OrderService
 	
 	/**
      *
-     * @description Sipariş N11 ID bilgisi kullanarak sipariş detaylarını almak için kullanılır,
-     *                sipariş N11 ID bilgisine orderList metotlarıyla ulaşılabilir.
+     * @description Bu metot yeni siparişleri kabul etmek için kullanılmaktadır.
      *
      * <code>
      *  $payload = [
@@ -110,8 +109,9 @@ Class OrderService
 
     /**
      *
-     * @description Sipariş N11 ID bilgisi kullanarak sipariş detaylarını almak için kullanılır,
-     *                sipariş N11 ID bilgisine orderList metotlarıyla ulaşılabilir.
+     * @description Bu metot siparişin kalemlerini bölmek için kullanılmaktadır.
+	 * 				 	Bu metot içerisinde verilen orderItemList'ler yeni bir order
+	 * 					oluşturur.
      *
      *<code>
      *   $payload = [];
