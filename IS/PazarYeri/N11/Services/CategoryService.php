@@ -56,10 +56,10 @@ Class CategoryService
 	 *				o özelliğe ait değerleri listeler.
 	 *
 	 */
-	public function GetCategoryAttributeValue($client, $attributeId, $pagination = array())
+	public function GetCategoryAttributeValue($client, $attributeId, $categoryId, $pagination = array())
 	{	
 
-		return $client->sendRequest('GetCategoryAttributeValue', array('categoryProductAttributeId' => $attributeId, 'pagingData' => $pagination));
+		return $client->sendRequest('GetCategoryAttributeValue', array('categoryProductAttributeId' => $attributeId, 'categoryId' => $categoryId, 'pagingData' => $pagination));
 
 	}
 
@@ -84,10 +84,10 @@ Class CategoryService
 	 *				birinci Seviye alt kategorinin (Örn. Ayakkabı) kodu verilerek tekrar servis çağırılmalıdır. 
 	 *
 	 */
-	public function getSubCategories($client, $categoryId)
+	public function getSubCategories($client, $categoryId, $lastModifiedDate)
 	{	
 
-		return $client->sendRequest('GetSubCategories', array('categoryId' => $categoryId));
+		return $client->sendRequest('GetSubCategories', array('categoryId' => $categoryId, 'lastModifiedDate' => $lastModifiedDate));
 
 	}
 
