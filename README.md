@@ -10,10 +10,6 @@ Bu API n11 için yazılmıştır. N11 için yazılmış olan gelişmiş bir php 
 
 Yaptığım işlerden memnun iseniz, daha iyi ve daha çok iş çıkartmam için beni destekleyebilirsiniz;
 
-## Discord
-
-Discord sunucumuza katılmak isterseniz hepinizi bekleriz; https://discord.gg/botbenson
-
 ## Katkı Çağrısı (Katkıda Bulunanlar)
 
 Çok fazla vaktim olmadığından N11'in bütün API fonksiyonları tamamlanmamıştır. Eksik fonksiyonları isterseniz tamamlayarak **pull request** gönderebilirsiniz veya istediğiniz fonksiyonun eklenmesi için **issue** açabilirsiniz. 
