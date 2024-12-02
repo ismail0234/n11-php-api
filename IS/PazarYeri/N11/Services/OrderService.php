@@ -85,4 +85,47 @@ Class OrderService
 
 	}	
 	
+	/**
+     *
+     * @description Bu metot yeni siparişleri kabul etmek için kullanılmaktadır.
+     *
+     * <code>
+     *  $payload = [
+     *      'numberOfPackages' => '1',
+     *  ];
+     *  foreach ($orderItems as $item) {
+     *       $payload['orderItemList']['orderItem'][] = [
+     *           'id' => $item['id'],
+     *       ];
+     *  }
+     *  </code>
+     * @param $client Request
+     * @param $data array{numberOfPackages: int,orderItemList: array{orderItem: array{id: int}}
+     */
+    public function acceptOrder($client, $data)
+    {
+        return $client->sendRequest('OrderItemAccept', $data);
+    }
+
+    /**
+     *
+     * @description Bu metot siparişin kalemlerini bölmek için kullanılmaktadır.
+	 * 				 	Bu metot içerisinde verilen orderItemList'ler yeni bir order
+	 * 					oluşturur.
+     *
+     *<code>
+     *   $payload = [];
+     *   foreach ($orderItems as $item) {
+     *        $payload['orderItemList']['orderItem'][] = [
+     *            'id' => $item['id'],
+     *        ];
+     *   }
+     *</code>
+     * @param $client Request
+     * @param $data array{orderItemList: array{orderItem: array{id: int}}
+     */
+    public function seperateCombinedItems($client, $data)
+    {
+        return $client->sendRequest('SeperateCombinedItems', $data);
+    }
 }
